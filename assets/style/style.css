@@ -36,28 +36,28 @@ main {
 }
 
 .img__radio_bucks {
-    background-image: url("../img/bucks.png");
+    background-image: url("../img/money.png");
 }
 
-.img__radio_shawarma {
-    background-image: url("../img/shawarma.png");
+.img__radio_pizza {
+    background-image: url("../img/pizza.png");
 }
 
-.img__radio_doshirak {
-    background-image: url("../img/doshirak.png");
+.img__radio_handshake {
+    background-image: url("../img/handshake.png");
 }
 
 /*table*/
 
 
-.shawarma {
-    background: url("../img/shawarma.png") center/contain no-repeat;
+.pizza {
+    background: url("../img/pizza.png") center/contain no-repeat;
     height: 40px;
     width: 60px;
 }
 
-.doshirak {
-    background: url("../img/doshirak.png") center/contain no-repeat;
+.handshake {
+    background: url("../img/handshake.png") center/contain no-repeat;
     height: 40px;
     width: 60px;
 }
@@ -103,6 +103,10 @@ main {
 .modal-currency {
     font-size: 2em;
 }
+
+/*#block-choice{
+    display: none; 
+}*/
 
 #block-customer {
     display: none;
