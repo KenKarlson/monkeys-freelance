@@ -8,17 +8,18 @@ document.addEventListener('DOMContentLoaded', () =>{
       blockChoice = document.getElementById('block-choice'),
       btnExit = document.getElementById('btn-exit'),
       formCustomer = document.getElementById('form-customer'),
-      ordersTable = document.getElementById('orders')
+      ordersTable = document.getElementById('orders'),
       modalOrder = document.getElementById('order_read'),
       modalOrderActive = document.getElementById('order_active');
 
   const orders = [];
+  //const wwwwwww = [modalOrder, modalOrderActive];
 
   const renderOrders = () => {
     ordersTable.textContent = '';
     orders.forEach((order, i) => {          
         ordersTable.innerHTML += `
-            <tr class="order taken" data-number-order="${i}">
+            <tr class="order" data-number-order="${i}">
                 <td>${i+1}</td>
                 <td>${order.title}</td>
                 <td class="${order.currency}"></td>
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   };
 
   const openModal = (numberOrder) => {
-      const order = orders[numberOrders];
+      const order = orders[numberOrder];
       const modal = !order.active ? modalOrderActive : modalOrder;
       modal.style.display = 'block';
   };
