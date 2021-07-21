@@ -133,3 +133,10 @@ main {
 .text-whrite{
     color:whitesmoke;
 }
+.head-sort{
+    cursor:pointer;
+}
+.head-sort :hover{
+    background-color: tomato;
+    border-radius: 8px;
+}
