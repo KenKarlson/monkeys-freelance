@@ -123,3 +123,20 @@ main {
     right: 1rem;
     padding: 0.5rem 3rem;
 }
+#btn-exit :hover{
+    background-color: red;
+}
+.text-white :hover{
+    background-color: red;
+    border-radius: 8px;   
+}
+.text-whrite{
+    color:whitesmoke;
+}
+.head-sort{
+    cursor:pointer;
+}
+.head-sort :hover{
+    background-color: tomato;
+    border-radius: 8px;
+}
