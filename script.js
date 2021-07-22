@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () =>{
       formCustomer = document.getElementById('form-customer'),
       ordersTable = document.getElementById('orders'),
       modalOrder = document.getElementById('order_read'),
-      modalOrderActive = document.getElementById('order_active');
+      modalOrderActive = document.getElementById('order_active'),
+      headTable = document.getElementById('headTable');
+
 
       //localStorage.clear()
 
@@ -20,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () =>{
   const toStorage = () => {
     localStorage.setItem('freeOrders', JSON.stringify(orders));
   };
+
+
   const declOfNum = (number, titles) => number + ' ' + titles[(number % 100 > 4 && number % 100 < 20) ? 
     2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]];
 
@@ -120,6 +124,27 @@ document.addEventListener('DOMContentLoaded', () =>{
       modal.addEventListener('click', handlerModal);
   };
 
+  const sortOrder = (arr, property) => {
+    arr.sort((a, b) => a[property] > b[property] ? 1 : -1);
+  };
+
+  headTable.addEventListener('click', (event) =>{
+      const target = event.target;
+      if(target.classList.contains('head-sort')){
+        if(target.id === 'taskSort'){
+          sortOrder(orders,'title');
+        }else if(target.id === 'currencySort'){
+          sortOrder(orders,'currency');
+        }else if(target.id === 'deadlineSort'){
+          sortOrder(orders,'deadline');
+        }
+        toStorage();
+        renderOrders();
+      }
+  });
+  
+  
+  
   ordersTable.addEventListener('click', (event) =>{
       const target = event.target;
       
